@@ -1,4 +1,4 @@
-package com.example.wilearn_v1.ui.home
+package com.example.wilearn_v1.ui.home.firstSemesterSubjects
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.wilearn_v1.R
-import com.example.wilearn_v1.databinding.FragmentHomeBinding
+import com.example.wilearn_v1.databinding.FragmentExternesRechnungswesenBinding
 
-class HomeFragment : Fragment() {
+class ExternesRechnungswesenFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentExternesRechnungswesenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,13 +19,8 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentExternesRechnungswesenBinding.inflate(inflater, container, false)
 
-        // Set click listener for cardView1
-        binding.cardView1.setOnClickListener {
-            // Navigate to a new fragment that shows 1st semester subjects
-            findNavController().navigate(R.id.action_navigation_home_to_firstSemesterSubjectsFragment)
-        }
 
         return binding.root
     }
