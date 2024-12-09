@@ -23,16 +23,16 @@ class FirstSemesterSubjectsFragment : Fragment() {
 
         // Set click listeners for each subject
         binding.subject1.setOnClickListener {
-            // Navigate to externes rechnungswesen
+            // Navigate to subject 1 details
             findNavController().navigate(R.id.action_firstSemesterSubjectsFragment_to_subject1Fragment)
         }
 
         binding.subject2.setOnClickListener {
-            // Navigate to wiss arbeiten
+            // Navigate to subject 2 details
             findNavController().navigate(R.id.action_firstSemesterSubjectsFragment_to_subject2Fragment)
         }
 
-
+        // Add more subjects as needed
 
         return binding.root
     }
