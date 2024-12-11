@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.wilearn_v1.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_firstSemesterSubjectsFragment"
+            app:destination="@id/firstSemesterSubjectsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstSemesterSubjectsFragment"
+        android:name="com.example.wilearn_v1.ui.home.FirstSemesterSubjectsFragment"
+        android:label="First Semester Subjects"
+        tools:layout="@layout/fragment_first_semester_subjects">
+        <action
+            android:id="@+id/action_firstSemesterSubjectsFragment_to_subject1Fragment"
+            app:destination="@id/subject1Fragment" />
+        <action
+            android:id="@+id/action_firstSemesterSubjectsFragment_to_subject2Fragment"
+            app:destination="@id/subject2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subject1Fragment"
+        android:name="com.example.wilearn_v1.ui.home.firstSemesterSubjects.ExternesRechnungswesenFragment"
+        android:label="Externes Rechnungswesen"
+        tools:layout="@layout/fragment_externes_rechnungswesen" />
+
+    <fragment
+        android:id="@+id/subject2Fragment"
+        android:name="com.example.wilearn_v1.ui.home.firstSemesterSubjects.WissArbeitenFragment"
+        android:label="Wissenschaftliches Arbeiten"
+        tools:layout="@layout/fragment_wiss_arbeiten" />
+
+    <fragment
+        android:id="@+id/subject3Fragment"
+        android:name="com.example.wilearn_v1.ui.home.firstSemesterSubjects.EinfWinfFragment"
+        android:label="Einführung Wirtschaftsinformatik"
+        tools:layout="@layout/fragment_einf_winf" />
+
+    <fragment
+        android:id="@+id/subject4Fragment"
+        android:name="com.example.wilearn_v1.ui.home.firstSemesterSubjects.GrundlagenInformatikFragment"
+        android:label="Grundlagen Informatik"
+        tools:layout="@layout/fragment_grundlagen_informatik" />
+
+    <fragment
+        android:id="@+id/subject5Fragment"
+        android:name="com.example.wilearn_v1.ui.home.firstSemesterSubjects.MatheEinsFragment"
+        android:label="Mathe 1"
+        tools:layout="@layout/fragment_mathe_eins" />
+
+    <fragment
+        android:id="@+id/subject6Fragment"
+        android:name="com.example.wilearn_v1.ui.home.firstSemesterSubjects.ProgrammierenEinsFragment"
+        android:label="Programmieren 1"
+        tools:layout="@layout/fragment_programmieren_eins" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.wilearn_v1.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.wilearn_v1.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
